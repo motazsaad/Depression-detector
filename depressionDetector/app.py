@@ -35,7 +35,7 @@ def index():
 def detect():
 	try:
 		#load Dataset
-		train=pd.read_csv("/Users/Rahaf/Desktop/depressionDetector/data/newVersion-2Cleaned.csv", encoding='utf-8', delimiter=',')
+		train=pd.read_csv("/Users/Lina/Desktop/depressionDetector/data/newVersion-2Cleaned.csv", encoding='utf-8', delimiter=',')
 		Train_X, Test_X, Train_Y, Test_Y = model_selection.train_test_split(train["Tweets"],train["Label"],random_state=1,test_size=0.20)
 		#TFIDF
 		vectorizerTFIDF = TfidfVectorizer(max_features=450, decode_error="ignore")
